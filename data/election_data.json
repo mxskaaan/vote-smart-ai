@@ -1,0 +1,95 @@
+{
+  "intents": [
+    {
+      "name": "greetings",
+      "keywords": ["hello", "hi", "hey", "namaste", "start", "good morning", "good evening"],
+      "responses": [
+        "Namaste! I am VoteSmart AI, your guide to the Indian election process. How can I assist you today?",
+        "Hello! I'm here to make voting simple for you. Do you want to check your eligibility or know about the process?"
+      ]
+    },
+    {
+      "name": "registration",
+      "keywords": ["register", "how to vote", "enroll", "voter id card apply", "new voter", "form 6"],
+      "responses": [
+        "To register as a new voter, you need to fill out **Form 6**.\n\n**Steps:**\n👉 1. Visit the Voter's Service Portal (voters.eci.gov.in) or download the Voter Helpline App.\n👉 2. Click on 'New Voter Registration' (Form 6).\n👉 3. Fill in your details (Name, Age, Address).\n👉 4. Upload proof of age and address.\n✅ 5. Submit and note down your Reference ID to track the status.",
+        "📝 Registering is easy! You can apply online via the ECI portal using **Form 6**. You will need a passport-size photo, age proof (like Aadhaar or PAN), and address proof. Would you like to know which documents are accepted?"
+      ],
+      "beginner_responses": [
+        "📝 **Beginner Guide to Registration:**\nSince it's your first time, don't worry, it's easy!\n👉 1. You need to fill out **Form 6** online at voters.eci.gov.in.\n👉 2. You will need to upload a photo, an age proof (like Aadhaar), and an address proof.\n👉 3. After submitting, a local officer (BLO) might visit your house to verify. \n✅ 4. Your Voter ID will be sent to your home via post!"
+      ]
+    },
+    {
+      "name": "documents",
+      "keywords": ["documents", "what is needed", "proof", "aadhaar", "pan card", "id needed", "identification"],
+      "responses": [
+        "For voter registration, you need:\n\n**1. Age Proof:** Aadhaar Card, PAN Card, Driving License, or 10th Certificate.\n**2. Address Proof:** Aadhaar Card, Passport, Ration Card, or latest utility bill (Water/Electricity).\n**3. Photograph:** A recent passport-size color photo.",
+        "You typically need an Age Proof (like Aadhaar or PAN) and an Address Proof (like Passport or Electricity bill) along with a recent photograph to register."
+      ],
+      "beginner_responses": [
+        "📁 **Documents for First-Timers:**\nTo register, keep these ready:\n👉 1. **Age Proof:** Your Aadhaar Card or 10th marksheet.\n👉 2. **Address Proof:** Aadhaar Card, Passport, or your parents' electricity bill (if you live with them).\n👉 3. **Photo:** A simple passport-size photo."
+      ]
+    },
+    {
+      "name": "lost_id",
+      "keywords": ["lost", "misplaced", "stolen", "duplicate", "epic", "find my voter id"],
+      "responses": [
+        "Don't worry if you've lost your Voter ID (EPIC). You can easily get a duplicate!\n\n**Steps:**\n👉 1. File a formal FIR or police report.\n👉 2. Fill out **Form 8** on the ECI portal (voters.eci.gov.in).\n👉 3. Select 'Issue of Replacement EPIC without correction'.\n✅ 4. Submit to receive a new card via post.\n\n💡 *Tip: Carry a copy of your FIR when dealing with officials.*\n\n👉 Do you want step-by-step instructions to download it online?"
+      ],
+      "follow_up_context": "download_id"
+    },
+    {
+      "name": "download_id",
+      "keywords": ["download", "download voter id", "download epic", "e-epic", "online id"],
+      "responses": [
+        "You can download a digital copy of your Voter ID (e-EPIC) easily:\n\n👉 1. Go to voters.eci.gov.in or the Voter Helpline App.\n👉 2. Login or Register.\n👉 3. Click on 'Download e-EPIC'.\n👉 4. Enter your EPIC number or Reference Number.\n✅ 5. Verify via OTP and download your PDF!"
+      ]
+    },
+    {
+      "name": "process_overview",
+      "keywords": ["process", "how it works", "steps", "election process", "voting day", "what happens"],
+      "responses": [
+        "The Indian Election process involves 4 main steps:\n\n👉 **1. Registration:** Eligible citizens register and get their Voter ID.\n👉 **2. Verification:** Voters check their name on the electoral roll (Voter List) before elections.\n👉 **3. Voting Day:** Voters go to their designated polling booth, verify identity, and cast their vote using the EVM (Electronic Voting Machine).\n✅ **4. Counting:** Votes are counted and results are declared.\n\n👉 Do you want a simple step-by-step guide for voting day?"
+      ],
+      "follow_up_context": "voting_guide"
+    },
+    {
+      "name": "polling_booth",
+      "keywords": ["where to vote", "polling booth", "location", "find booth", "my booth"],
+      "responses": [
+        "You can find your exact polling booth on the ECI portal.\n\n1. Visit electoralsearch.eci.gov.in\n2. Search by your EPIC number or personal details.\n3. Your voter slip will show your exact Polling Station name and address."
+      ]
+    },
+    {
+      "name": "nri_voting",
+      "keywords": ["nri", "abroad", "overseas", "living outside", "foreign"],
+      "responses": [
+        "Yes, NRIs (Overseas Indians) can vote!\n\nYou need to fill out **Form 6A** to register. However, currently, NRIs must be physically present at their designated polling booth in India to cast their vote. E-voting is not yet available for NRIs."
+      ]
+    },
+    {
+      "name": "about_evm",
+      "keywords": ["evm", "machine", "what is evm", "how does evm work"],
+      "responses": [
+        "**EVM (Electronic Voting Machine)** is a simple machine with buttons used for casting your vote.\n\nNext to each button, you will see a party symbol and a candidate's name. To vote, just press the button for your chosen candidate. A red light will glow, you'll hear a beep, and your vote is recorded!"
+      ]
+    },
+    {
+      "name": "ballot_paper",
+      "keywords": ["ballot", "ballot paper", "what is ballot paper"],
+      "responses": [
+        "A **Ballot Paper** is a simple piece of paper with a list of candidate names and their party symbols.\n\nYou just have to stamp or mark your choice next to the candidate you want to vote for, and drop it in a sealed box."
+      ]
+    },
+    {
+      "name": "voting_basics",
+      "keywords": ["voting basics", "explain voting basics", "how does voting work", "what is voting"],
+      "responses": [
+        "Voting is very simple. Here are the 4 basic steps:\n👉 **1. Go to booth:** Visit your assigned polling booth on election day.\n👉 **2. Verify ID:** Show your Voter ID to the officer.\n👉 **3. Press Button:** Go to the voting machine (EVM). Press the button next to the party symbol and candidate name you want to vote for.\n✅ **4. Vote Done:** You will hear a beep sound, and your vote is cast!\n\n💡 *Tip: Reach the polling booth early in the morning to avoid the crowd!*"
+      ]
+    }
+  ],
+  "fallback": [
+    "🤔 I'm sorry, I didn't quite catch that.\n\nHere are some things you can ask me:\n👉 'Am I eligible to vote?'\n👉 'How to register for voter ID?'\n👉 'Explain the election process'"
+  ]
+}

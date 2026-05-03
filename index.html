@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteSmart AI - Election Process Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Background Elements -->
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+
+    <div class="app-container">
+        
+        <!-- Top Official Bar -->
+        <div class="top-bar">
+            <span><i class="fa-solid fa-landmark flag-icon"></i> Empowering Indian Voters</span>
+            <span class="secure-text"><i class="fa-solid fa-lock"></i> Secure & Private Assistant</span>
+        </div>
+
+        <!-- Header -->
+        <header class="chat-header" style="flex-direction: column; justify-content: center; text-align: center; padding-bottom: 15px; position: relative;">
+            <div class="header-info" style="margin-bottom: 10px;">
+                <h1 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 4px;">VoteSmart AI – Election Assistant</h1>
+                <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500; display: block;">Simple guidance for first-time voters</span>
+                <span style="font-size: 0.65rem; color: var(--text-muted); opacity: 0.8; display: block; margin-top: 6px;">Based on general election guidelines in India</span>
+            </div>
+            <div class="header-right" style="position: absolute; top: 15px; right: 24px;">
+                <!-- Google Translate Element -->
+                <div id="google_translate_element"></div>
+            </div>
+        </header>
+
+        <!-- Chat Area -->
+        <main class="chat-box" id="chatBox">
+            <!-- Welcome Info Panels -->
+            <div class="welcome-panels">
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-person-booth"></i> How it Works</h3>
+                    <ol>
+                        <li>Register for Voter ID (Form 6)</li>
+                        <li>Verify name on Electoral Roll</li>
+                        <li>Show valid ID at polling booth</li>
+                        <li>Press EVM button to vote</li>
+                    </ol>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Quick Tips</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-id-card"></i> Carry original ID (Aadhaar/PAN)</li>
+                        <li><i class="fa-solid fa-clock"></i> Go early to avoid queues</li>
+                        <li><i class="fa-solid fa-mobile-screen-button"></i> Phones are not allowed inside</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <h3 style="margin-bottom: 0;"><i class="fa-solid fa-lightbulb"></i> Did you know?</h3>
+                        <button onclick="cycleFact()" style="background: transparent; border: none; cursor: pointer; color: var(--primary); font-size: 0.9rem;" title="Next Fact"><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                    <p id="factDisplay" style="font-size: 0.85rem; line-height: 1.5; color: var(--text-main); margin: 0; min-height: 60px;">
+                        <!-- Populated by JS -->
+                    </p>
+                </div>
+            </div>
+
+            <div class="message bot-message">
+                <div class="msg-content">
+                    Namaste! 🙏 I am VoteSmart AI. I can help you check your eligibility, understand the registration process, or find out what to do if you lost your Voter ID. What would you like to know?
+                </div>
+            </div>
+        </main>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button class="action-btn" onclick="triggerAction('Guide me step-by-step')">🧭 Guide me step-by-step</button>
+            <button class="action-btn" onclick="triggerAction('What should I do now?')">🚀 What should I do now?</button>
+            <button class="action-btn" onclick="triggerAction('Am I eligible to vote?')">🤔 Am I eligible to vote?</button>
+            <button class="action-btn" onclick="triggerAction('How to register for voter ID?')">📝 How to register?</button>
+            <button class="action-btn" onclick="triggerAction('I lost my voter ID')">🔍 Lost voter ID</button>
+        </div>
+
+        <!-- Input Area -->
+        <footer class="input-area">
+            <button id="voiceBtn" class="icon-btn" title="Speak">
+                <i class="fa-solid fa-microphone"></i>
+            </button>
+            <input type="text" id="userInput" placeholder="Type your question here..." autocomplete="off" />
+            <button id="sendBtn" class="icon-btn primary" title="Send">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </footer>
+    </div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en', 
+              includedLanguages: 'en,hi,bn,te,mr,ta,ur,gu,kn,or,ml,pa',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Main Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
